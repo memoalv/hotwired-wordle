@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_04_012827) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_04_015134) do
   create_table "words", force: :cascade do |t|
     t.string "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["value"], name: "index_words_on_value", unique: true
   end
 
 end
